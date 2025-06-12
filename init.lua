@@ -39,6 +39,7 @@ require('mini.trailspace').setup()
 require('mini.tabline').setup()
 require('mini.statusline').setup()
 require('mini.pick').setup()
+require('mini.visits').setup()
 require('mini.extra').setup()
 require('mini.bufremove').setup()
 local miniclue = require('mini.clue')
@@ -101,6 +102,7 @@ end
 local xmap_leader = function(suffix, rhs, desc)
   vim.keymap.set('x', '<Leader>' .. suffix, rhs, { desc = desc })
 end
+nmap_leader('<Leader>', '<cmd>lua MiniExtra.pickers.visit_paths()<CR>', "Live grep")
 
 nmap_leader('bd', '<Cmd>lua MiniBufremove.delete()<CR>',  'Delete buffer')
 nmap_leader('bw', '<Cmd>lua MiniBufremove.wipeout()<CR>', 'Wipeout buffer')
