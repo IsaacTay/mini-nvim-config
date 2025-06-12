@@ -37,6 +37,7 @@ require('mini.splitjoin').setup()
 require('mini.trailspace').setup()
 require('mini.tabline').setup()
 require('mini.statusline').setup()
+require('mini.bufremove').setup()
 local miniclue = require('mini.clue')
 miniclue.setup({
   triggers = {
@@ -97,8 +98,8 @@ local xmap_leader = function(suffix, rhs, desc)
   vim.keymap.set('x', '<Leader>' .. suffix, rhs, { desc = desc })
 end
 
-nmap_leader('bd', '<Cmd>lua MiniBufremove.delete()<CR>',  'Delete')
-nmap_leader('bw', '<Cmd>lua MiniBufremove.wipeout()<CR>', 'Wipeout')
+nmap_leader('bd', '<Cmd>lua MiniBufremove.delete()<CR>',  'Delete buffer')
+nmap_leader('bw', '<Cmd>lua MiniBufremove.wipeout()<CR>', 'Wipeout buffer')
 
 nmap_leader('lf', '<Cmd>lua vim.lsp.buf.format()<CR>',     'Format')
 xmap_leader('lf', '<Cmd>lua vim.lsp.buf.format()<CR>',     'Format')
