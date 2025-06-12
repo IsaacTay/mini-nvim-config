@@ -103,6 +103,7 @@ end
 nmap_leader('bd', '<Cmd>lua MiniBufremove.delete()<CR>',  'Delete buffer')
 nmap_leader('bw', '<Cmd>lua MiniBufremove.wipeout()<CR>', 'Wipeout buffer')
 nmap_leader('b/', '<cmd>lua MiniPick.builtin.buffers()<CR>', "Search buffers")
+nmap_leader('bb', '<cmd>lua MiniPick.builtin.buffers()<CR>', "Search buffers")
 
 nmap_leader('lf', '<Cmd>lua vim.lsp.buf.format()<CR>',     'Format')
 nmap_leader('lr', '<Cmd>lua vim.lsp.buf.rename()<CR>',     'Rename')
@@ -110,6 +111,7 @@ nmap_leader('lR', '<Cmd>lua vim.lsp.buf.references()<CR>', 'References')
 
 nmap_leader('fm', '<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', "Opens mini.files")
 nmap_leader('f/', '<cmd>lua MiniPick.builtin.files()<CR>', "Search files")
+nmap_leader('ff', '<cmd>lua MiniPick.builtin.files()<CR>', "Search files")
 
 nmap_leader('/h', '<cmd>lua MiniPick.builtin.help()<CR>', "Search help")
 nmap_leader('/b', '<cmd>lua MiniPick.builtin.buffers()<CR>', "Search buffers")
