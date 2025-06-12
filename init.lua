@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(mini_path) then
   vim.fn.system(clone_cmd)
   vim.cmd('packadd mini.nvim | helptags ALL')
 end
+require('mini.deps').setup({ path = { package = path_package } })
 
 vim.opt.relativenumber = true
 vim.cmd("language en_US")
