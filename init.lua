@@ -110,6 +110,7 @@ nmap_leader('lr', '<Cmd>lua vim.lsp.buf.rename()<CR>',     'Rename')
 nmap_leader('lR', '<Cmd>lua vim.lsp.buf.references()<CR>', 'References')
 
 nmap_leader('fm', '<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', "Opens mini.files")
+nmap_leader('ft', '<cmd>lua MiniTrailspace.trim()<CR>', "Search files")
 nmap_leader('f/', '<cmd>lua MiniPick.builtin.files()<CR>', "Search files")
 nmap_leader('ff', '<cmd>lua MiniPick.builtin.files()<CR>', "Search files")
 
