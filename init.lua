@@ -39,6 +39,7 @@ require('mini.trailspace').setup()
 require('mini.tabline').setup()
 require('mini.statusline').setup()
 require('mini.pick').setup()
+require('mini.extra').setup()
 require('mini.bufremove').setup()
 local miniclue = require('mini.clue')
 miniclue.setup({
@@ -118,6 +119,7 @@ nmap_leader('ff', '<cmd>lua MiniPick.builtin.files()<CR>', "Search files")
 nmap_leader('/h', '<cmd>lua MiniPick.builtin.help()<CR>', "Search help")
 nmap_leader('/b', '<cmd>lua MiniPick.builtin.buffers()<CR>', "Search buffers")
 nmap_leader('/f', '<cmd>lua MiniPick.builtin.files()<CR>', "Search files")
+nmap_leader('/k', '<cmd>lua MiniExtra.pickers.keymaps()<CR>', "Live grep")
 nmap_leader('//', '<cmd>lua MiniPick.builtin.grep_live()<CR>', "Live grep")
 local show_dotfiles = true
 
