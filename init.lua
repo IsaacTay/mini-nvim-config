@@ -42,6 +42,7 @@ require('mini.pick').setup()
 require('mini.visits').setup()
 require('mini.extra').setup()
 require('mini.bufremove').setup()
+require('mini.completion').setup()
 local miniclue = require('mini.clue')
 miniclue.setup({
   triggers = {
@@ -172,3 +173,10 @@ vim.api.nvim_create_autocmd('User', {
     vim.keymap.set('n', 'gy', yank_path, { buffer = b, desc = 'Yank path' })
   end,
 })
+
+-- Completion Engine
+local map_multistep = require('mini.keymap').map_multistep
+map_multistep('i', '<Tab>',   { 'pmenu_next' })
+map_multistep('i', '<S-Tab>', { 'pmenu_prev' })
+map_multistep('i', '<CR>',    { 'pmenu_accept', 'minipairs_cr' })
+map_multistep('i', '<BS>',    { 'minipairs_bs' })
